@@ -30,4 +30,10 @@ Example Blog steps:
 		- work on create blade
 		- work on store function
 
+	> Edit the navbar
+		- show the create posts only when the user is logged in
+		- gard the controller
+
+	> Make the styles in the posts.index page
+
 
