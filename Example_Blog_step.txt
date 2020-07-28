@@ -1,0 +1,33 @@
+Example Blog steps:
+
+	> new Database in .env file
+	  create database in phpmyamin
+
+	> $ composer require laravel/ui
+	  $ php artisan ui vue --auth
+	  $ npm install
+	  $ npm run watch
+	  $ php artisan migrate
+	  $ php artisan serve
+
+	> create new user in the database
+
+
+	> Working on Post back-end:
+		$ php artisan make:model Post -m
+		$ php artisan make:controller PostsController -r
+		- go to the migrateion file and add the columns
+			string->('title')
+			string->('body')
+			integer->('user_id')->unsigned()
+		$ php artisan migrate
+		- add resource route in web.php
+		- add posts folder in views and add [index - create - edit] files
+
+	> createing post:
+		- add link in the navbar
+		- add the view to create function
+		- work on create blade
+		- work on store function
+
+
