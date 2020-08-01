@@ -1,0 +1,60 @@
+Laravel tutorail script:
+
+Video #1 (Introduction & installation):
+	> Welcoming (slide)
+		- Hello everybody and welcome to Laravel basics course. I hope you find this course usefull and 	  enjoy spending your time with me.
+	> What is Laravel? (slide)
+		- Laravel is a framework for creating php websites, a framework is a platform for developing software applications and provides the developer with lots of usefull packages that can be used to develop the project easily.
+		
+
+	> MVC Archetecture: (slide)
+		- Let's take a look at the structure of Laravel.
+		- Laravel was built in an MVC approach whitch stands for Model - View - Controller. and it's basically how the code is structured and designed. 
+		- The model represents something like a data type or we can say that an object, and the view  	  represents the html template that the browser is rendering, and finally the controller is the one   responsable for the logical calculations. it takes the data from the model and sends it to the view. 
+		
+
+		- Now you may find things unclear but I promise that once we dive into the code everything will be simple.
+
+	> Course prerequisite: (slide)
+		- now in order to get the most of the course I do highly recommend to have knowledge in these three things, it will help you get it faster and focus on Laravel itself. you can follow along with me without them but it is always better to learn things separatly.
+
+	==== CUT THE SCENE ====
+
+	> Laravel installation: (browser)
+		- let's take a look at Laravel installation
+		- you need to have composer installed in your system. and to install it go to composer website I'll leave the link in the description, just install it and you are good to go.
+		- composer is the packahe manager witch we will use to get laravel project and install the needed packages later on
+		- to varify your installation just type composer in the terminal and vwallah, here you go,
+		- now let's intall laravel project. go to laravel website and composer install the project. change the blog name if you wanted to, I will leave it as it is.
+		- next you need to have a server manager, something like xampp, this will install php and mysql database as well.
+		- now open the project with your IDE, I like to use vs code. open the terminal and type php artisan serve, by the way we will talk about the artisan commands in more depth later on. but for now just follow my lead.
+		- go to your website and type localhost:8000 and you will get something like this.
+
+	> Ending:
+		- so now we have Laravel installed and up and running, we will play arround with it through this video series. see you in the next one. bye.
+
+
+Video #2 (what we will build in this course):
+	> Starting (the final project home page)
+		- Hello again, I hope you feel well today. this videos are splitted into two phases.
+		- during the first one we will take a look at the basics of Laravel and have a solid knowledge of how it works.
+		- And in the second phase we will build a very simple and basic website just to apply what we have learned in the course.
+	> Start the tour in the project
+		- So let's take a look at what is the final project looks like.
+		- I learned laravel with (Trivarsy media channel) and the final project was a blog posts so I decided to follow my sense and teach you guys how to build it.
+		- It's a very basic one. it foucuses on basic CRUD opperations whitch are Create, Read, Update, Delete. for posts.
+		- We have a complete login and registration system that comes packed with Laravel, let's login to my account. we can see these are the posts that are in the websites, I can manage my one posts and can only view other's posts.
+		- let's add a post together, (add post)
+		- now let's edit this post, (edit post)
+		- and also let's delete this post, (delete post)
+	> Ending:
+		- so this is what we will build together, a really good advantage of laravel is that it keeps you away from how the code really works, I mean pure php. and lets you focus on the project's requirments. Laravel is fully customizable, you can easly overwrite any function came with the system and you are good to go.
+		- I hope you enjoyed this video, see you in the next one.
+
+Video #3 Routing to views:
+	> Stating (slide)
+		- Hello all, welcome to the third video in this series, I'm glad you are still following along with me.
+		- Now we will talk about Laravel in terms of routing, let's say that you typed a website URL in the browser. then what happens is it sends a request to the web server and the server responses based on the received URL.
+		- The respose goes as the following, the server look up the url in the routes file. if the URL is found then necessery data will be proccessed and injected in a view blade. and that view is sent back to the browser as a response.
+
+

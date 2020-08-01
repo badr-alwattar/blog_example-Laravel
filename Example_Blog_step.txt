@@ -30,10 +30,34 @@ Example Blog steps:
 		- work on create blade
 		- work on store function
 
+	> Session flash messages:
+		- add the flash messages in app.blade.php
+
 	> Edit the navbar
 		- show the create posts only when the user is logged in
 		- gard the controller
 
-	> Make the styles in the posts.index page
+	> get posts to show them
+		- posts.index
+		- index in posts controller
+
+	> Edit post:
+		- add the yellow button on the post
+		- add the view to edit function
+		- make the form in edit view
+		- update function
+
+
+	> Delete post:
+		- make the form button
+		- destroy method
+
+
+	> protect edit and delete posts from other users
+
+
+
+	
+
 
 

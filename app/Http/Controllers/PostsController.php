@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use Auth;
-
+use Session;
 class PostsController extends Controller
 {
 
@@ -61,9 +61,9 @@ class PostsController extends Controller
         $post->body = $request->body;
         $post->user_id = Auth::id();
         $post->save();
-        
-        // return with message
-        return view('posts.index')->with('success','Post saved');
+
+        Session::flash('success', 'Post successfully added!');
+        return redirect('/posts');
         
     }
 
@@ -86,7 +86,12 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        if(!$post->checkAuth($post->user_id)) {
+            Session::flash('error', 'Sorry my friend');
+            return redirect('/posts');
+        }
+        return view('posts.edit')->with('post', $post);
     }
 
     /**
@@ -98,7 +103,25 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->validate([
+            'title' => 'required',
+            'body' => 'required',
+        ]);
+
+        // find the post
+        $post = Post::find($id);
+        if(!$post->checkAuth($post->user_id)) {
+            Session::flash('error', 'Sorry my friend');
+            return redirect('/posts');
+        }
+
+        // save data
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->save();
+
+        Session::flash('success', 'Post successfully updated!');
+        return redirect('/posts');
     }
 
     /**
@@ -109,6 +132,14 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        if(!$post->checkAuth($post->user_id)) {
+            Session::flash('error', 'Sorry my friend');
+            return redirect('/posts');
+        }
+        
+        $post->delete();
+        Session::flash('success', 'Post successfully deleted!');
+        return redirect('/posts');
     }
 }
